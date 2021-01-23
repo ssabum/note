@@ -4,6 +4,20 @@
 
 코드의 History를 관리하는 도구로 개발된 과정을 볼 수 있으며 이전 버전을 보원하고 변경 사항을 비교, 분석 및 병합도 가능
 
+## 0. 순서
+
+> working directory
+>
+> > stage fixes(git add)
+>
+> staging area
+>
+> > commit(git commit)
+>
+> git directory(repository)
+>
+> > checkout the project
+
 ## 1. 준비
 
 * 윈도우에서 git을 사용하기 위해서는 `git bash`를 설치한다.
