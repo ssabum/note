@@ -1,4 +1,4 @@
-# Tkinter를 이용해 간단한 GUI framework 제작
+# Tkinter를 이용해 간단한 GUI framework 제작_21.01.27
 
 > `Tkinter`는 `python wrapper`로서 파이썬에서 사용할 수 있도록 한 `lightweight GUI`이다.
 >

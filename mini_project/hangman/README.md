@@ -1,4 +1,4 @@
-# Hangman mini game
+# Hangman mini game_21.01.24
 
 > 21.01.23 python을 이용한 hangman mini game만들기
 

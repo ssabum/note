@@ -1,4 +1,4 @@
-# Karaoke Microphone
+# Karaoke Microphone_21.01.29
 
 > `Pyaudio`를 이용해서 목소리를 입력받아 에코를 넣어서 출력해보자
 
