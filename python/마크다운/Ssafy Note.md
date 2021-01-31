@@ -307,7 +307,7 @@ insert(n, x): 위치 n에 x를 삽입 # 맨뒤에 넣을 때는 n = len(원본) 
 remove(): 삭제 없으면 오류
 pop(n): 위치 n을 반환하며 원본에서 삭제
 clear(): 모든 항목 삭제
-indexn(n): n을 찾아 해당 index 반환
+index(n): n을 찾아 해당 index 반환
 count(n): n의 개수 출력
 sort(): 정렬 # sorted()와 다르게 원본 변형 후 None 반환
 reverse(): 반대로 뒤집어서 출력
