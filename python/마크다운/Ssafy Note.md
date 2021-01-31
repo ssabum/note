@@ -117,7 +117,7 @@ a.count(1)
 
   > 변경 불가능 데이터
   >
-  > > `리터럴`, `레인지`, `튜플`
+  > > `리터럴`, `레인지`, `튜플`, `frozenset`
 
 * Mutable데이터
 
@@ -208,3 +208,180 @@ def avg(scores):
 ```
 
 ---
+
+## 2주차(21.01.25~01.29)
+
+* 재귀함수(Recursive function)
+
+```python
+# 피보나치 수열
+def fib(n):
+    # base case
+    if n < 2:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+```
+
+* 조건표현식(Conditional expression)
+
+```python
+# 조건표현식(=삼항연산자)
+true_value if <조건식> else false_value
+```
+
+* Comprehension
+
+```python
+# List comprehension
+[출력표현식 for 요소 in 입력Sequence [if 조건식]]
+[출력표현식 [if 조건식 else 조건식] for 요소 in 입력Sequence]
+[출력표현식 for 요소 in 입력Sequence for 요소 in 입력Sequence]
+
+# Set comprehension
+{출력표현식 for 요소 in 입력Sequence [if 조건식]}
+
+# Dictionary comprehension
+{Key:Value for 요소 in 입력Sequence [if 조건식]}
+```
+
+* 스코프(Scope)
+
+  >global scope: 코드 어디에서든 참조할 수 있는 공간
+  >
+  >local scope: 함수가 만든 스코프로 함수 내부에서만 참조할 수 있는 공간
+  >
+  >global variable: 전역 스코프에 정의된 변수
+  >
+  >local variale: 로컬 스코프에 정의된 변수
+
+* 이름규칙
+
+>위에서 아래로 이동
+>
+>Local scope: 정의된 함수
+>
+>Enclosed scope: 상위 함수
+>
+>Global scope: 함수 밖 변수, `input`모듈
+>
+>Built-in scope: 파이썬에 내장된 함수
+
+* Function method
+
+```python
+# str(변경x, 순서o, 순회o)
+fine(n): n의 첫번째 위치 반환, 없으면 -1 반환
+index(n): n의 첫번째 위치 반환, 없으면 오류
+replace(old, new, [count]): 문자열 대체
+strip(): 특정 문자 제거
+split(): 특정 단위로 분할
+''.join(): 구분자로 합쳐서 문자열로 반환
+capitalize(): 맨앞만 대문자
+title(): 공백이나 `이후 대문자
+upper(): 대문자 변화
+lower(): 소문자 변환
+swapcase(): 대↔소문자 변환
+isalpha(): 알파벳인지 boolean 반환
+isascii(): 아스키문자인지 boolean 반환
+isalnum(): 알파벳+숫자인지 boolean 반환
+isdecimal(): 숫자인지 boolean 반환
+isdigit(): 숫자의 변형까지 boolean 반환(제곱표현)
+isnumeric(): 숫자로 해석되는 기호까지 boolean 반환(분수형태)
+isidentifier(): 파이썬의 키워드인지 boolean 반환
+isprintable(): 출력가능한지 boolean 반환
+isspace(): 화이트스페이스인지 boolean 반환(공백, 탭)
+islower(): 소문자인지 boolean 반환
+isupper(): 대문자인지 boolean 반환
+istitle(): 앞글자만 대문자인지 boolean 반환
+```
+
+```python
+# list(변경o, 순서o, 순회o)
+append(): 리스트에 추가
+extend(): 리스트에 확장(list, range, tuple, str 추가)
+    cafe = ['starbucks', 'tomntoms', 'hollys']
+    cafe.extend('ediya')
+    print(cafe) # ['starbucks', 'tomntoms', 'hollys', 'e', 'd', 'i', 'y', 'a']
+insert(n, x): 위치 n에 x를 삽입 # 맨뒤에 넣을 때는 n = len(원본) 사용
+remove(): 삭제 없으면 오류
+pop(n): 위치 n을 반환하며 원본에서 삭제
+clear(): 모든 항목 삭제
+indexn(n): n을 찾아 해당 index 반환
+count(n): n의 개수 출력
+sort(): 정렬 # sorted()와 다르게 원본 변형 후 None 반환
+reverse(): 반대로 뒤집어서 출력
+```
+
+```python
+# set(변경o, 순서x, 순회o)
+add(): 세트에 추가
+update(): 세트에 확장 # literable(순환가능) 추가
+remove(): 삭제 없으면 오류
+discard(): 삭제 없으면 오류x
+pop(): 임의의 원소를 반환하며 원본에서 제거
+```
+
+```python
+# dict(변경o, 순서x, 순회o)
+get(key, n): value 반환, 없을 경우 n 반환
+pop(key, n): value 반환하며 원본에서 제거, 없을 경우 n 반환
+update({key: value}): 원본에서 덮어쓰기
+keys(): keys 반환
+values(): values 반환
+items(): keys, values 반환
+```
+
+* 객체(Object)
+
+  > `type`: 공통된 속성과 조작법을 가진 객체들의 분류
+  >
+  > `attribute`: 객체의 상태 / 데이터
+  >
+  > `method`: 특정 객체에 적용할 수 있는 행위
+
+```python
+# instance
+# 특정 type의 실제 데이터 예시
+# instancemethod는 호출시 첫번째 인자로 자기자신
+
+# class
+# 객체들의 분류를 정의할 때 쓰이는 키워드, 공통된 속성과 행위를 정의(사용자 정의 데이터형)
+```
+
+* 상속
+
+  > 추상클래스: 무언가를 확립되지 않고 추상적으로 사용되는 클래스
+  >
+  > > 인스턴스 생성 x
+  > >
+  > > 자식 클래스들이 각각의 독립된 공통적인 기능을 갖출 때 사용
+  > >
+  > > 각각의 독립된 공통적인 기능이 값을 공유하면 안되므로 구현하지 않은 빈 메소드를 사용
+  >
+  > 다중상속: 여러 부모 클래스들로부터 상속 받는 것
+  >
+  > 메서드 오버라이딩: 부모클래스에서 정의된 메소드를 자식 클래스에서 다시 정의
+
+```python
+# super function
+# 상속받은 부모 클래스를 의미
+super().__init__(nmae)
+```
+
+* Map, Filter, Zip function
+
+```python
+# map
+# iterable 객체의 모든 element에 함수를 적용한 후 return
+map(function, iterable)
+
+# filter
+# iterable 객체의 모든 element에 함수를 적용한 후 True에 해당하는 element만 return
+filter(function, iterable)
+
+# zip
+# 여러개의 iterable의 element를 하나씩 매핑하여 각각의 tuple로 병합
+zip(*iterable)
+```
+
