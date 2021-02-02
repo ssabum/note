@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎈Document</title>
+  <style>
+    .grand-parent {
+      /* 박스 스타일링 */
+      width: 500px;
+      height: 500px;
+      border: 5px dotted lightsalmon;
+      padding: 50px;
+      position: relative;
+    }
+
+    .parent {
+      /* 박스 스타일링 */
+      width: 500px;
+      height: 500px;
+      border: 5px dotted lightslategrey;
+    }
+
+    .child {
+      /* 박스 스타일링 */
+      width: 150px;
+      height: 100px;
+      border: 5px dotted lightgreen;
+      border-radius: 12px;
+      background-color: lightyellow;
+
+      /* 텍스트 정렬 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+  
+  /* 원래 있던 위치를 기준으로 */
+  .relative {
+    position: relative;
+    left: 100px;
+    top: 80px;
+  }
+
+  .absolute {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="grand-parent">
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child fixed">2</div>
+      <div class="child">3</div>
+    </div>
+  </div>
+</body>
+</html>
