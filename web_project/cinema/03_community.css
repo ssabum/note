@@ -1,0 +1,33 @@
+/* 03_community.css */
+/* 아래에 코드를 작성해 주세요. */
+
+h1 {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+aside {
+  color: rgb(46, 140, 242);
+}
+
+article li {
+  justify-content: space-between;
+}
+
+article a {
+  color: black;
+  line-height: 2rem;
+}
+
+div nav{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

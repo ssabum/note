@@ -1,0 +1,19 @@
+/* 02_home.css */
+/* 아래에 코드를 작성해 주세요. */
+
+h1 {
+  text-align: center;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+section {
+  text-align: center;
+}
+
+section img {
+  width: 7rem;
+  height: 23rem;
+}
