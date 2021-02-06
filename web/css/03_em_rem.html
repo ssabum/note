@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    /* 
-      em: 부모 요소 기준으로 결정
-      rem: 최상위 요소(<html>) 기준으로 결정
-    */
     .em {
       font-size: 1.5em;
     }
@@ -16,15 +12,11 @@
     .rem {
       font-size: 1.5rem;
     }
-
   </style>
 </head>
 <body>
-  <!-- 16 * 1.5 -->
   <ul class="em">
-    <!-- 16 * 1.5 * 1.5 -->
     <li class="em">1.5em</li>
-    <!-- 16 * 1.5 -->
     <li class="rem">1.5rem</li>
     <li>no class</li>
   </ul>

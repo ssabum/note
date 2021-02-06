@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  height: 5000px;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 1rem;
+  height: 60px;
+  z-index: 1030;
+}
+
+.nav-menu > a {
+  text-decoration: none;
+  color: black;
+  margin: 0 1rem;
+}
+
+section {
+  background-image: url(/images/main.png);
+  height: 500px;
+  margin-top: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.product-header {
+  margin: 2rem 0;
+}
+
+.product-header > h3 {
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+footer > a {
+  margin: 0 1rem;
+}
+
+footer img {
+  height: 45px;
+}
