@@ -3,20 +3,22 @@ sys.stdin = open("input.txt")
 
 T = int(input())
 
-
 for tc in range(1, T+1):
 
-    numbers = list(map(int, input()))
+    numbers = input()
 
-    cnt = [0] * 10
+    cnt = [0] * 12
     for number in numbers:
-        cnt[number] += 1
+        cnt[int(number)] += 1
 
-    tri, step, i, result = 0, 0, 0, 0
-    while i < 8:
+    i = 0
+    tri = 0
+    step = 0
+
+    while i < 10:
         if cnt[i] >= 3:
             tri += 1
-            cnt[i] -= 1
+            cnt[i] -= 3
             continue
         if cnt[i] >= 1 and cnt[i+1] >= 1 and cnt[i+2] >= 1:
             step += 1
