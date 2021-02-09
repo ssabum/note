@@ -7,24 +7,24 @@ for tc in range(1, T+1):
 
     numbers = input()
 
-    cnt = [0] * 12
+     = [0] * 12
     for number in numbers:
-        cnt[int(number)] += 1
+        [int(number)] += 1
 
     i = 0
     tri = 0
     step = 0
 
     while i < 10:
-        if cnt[i] >= 3:
+        if [i] >= 3:
             tri += 1
-            cnt[i] -= 3
+            [i] -= 3
             continue
-        if cnt[i] >= 1 and cnt[i+1] >= 1 and cnt[i+2] >= 1:
+        if [i] >= 1 and [i+1] >= 1 and [i+2] >= 1:
             step += 1
-            cnt[i] -= 1
-            cnt[i+1] -= 1
-            cnt[i+2] -= 1
+            [i] -= 1
+            [i+1] -= 1
+            [i+2] -= 1
             continue
         i += 1
 
