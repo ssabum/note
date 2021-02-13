@@ -17,14 +17,14 @@ for tc in range(1, T+1):
         num_dict[int(num)] = 1
 
     number = 0
-    cnt = 0
+    count = 0
     for idx, val in num_dict.items():
-        if val > cnt:
-            cnt = val
+        if val > count:
+            count = val
             number = idx
-        if val == cnt:
+        if val == count:
             if number < idx:
                 number = idx
 
-    print("#{} {} {}".format(tc, number, cnt))
+    print("#{} {} {}".format(tc, number, count))
 

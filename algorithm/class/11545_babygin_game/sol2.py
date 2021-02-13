@@ -4,7 +4,7 @@ sys.stdin = open("input.txt")
 T = int(input())
 
 def check_babygin(numbers):
-    # cnter = [0] * 10
+    # counter = [0] * 10
     counter = [0 for _ in range(10)]
 
     is_babysin = 0
