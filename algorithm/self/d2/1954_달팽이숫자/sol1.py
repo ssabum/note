@@ -5,21 +5,26 @@ T = int(input())
 
 
 for tc in range(1, T+1):
-    # N * N 행렬
     N = int(input())
-    # 행렬에 들어갈 1부터 N^2까지 숫자
-    number = [i for i in range(1, N**2+1)]
-    # 결과 담을 리스트
-    ans = [[0 for i in range(N)] for i in range(N)]
+    arr = [[0 for _ in range(N)] for _ in range(N)]
 
-    for i in range(N):
-        ans[0][i] = number[i]
-    for i in range(1, N):
-        ans[i][-1] = number[N+i-1]
+    num = 1
+    row = 0
+    col = -1
+    trans = 1
+    while N > 0:
+        for _ in range(N):
+            col += trans
+            arr[row][col] = num
+            num += 1
+        N -= 1
+        for _ in range(N):
+            row += trans
+            arr[row][col] = num
+            num += 1
+        trans *= -1
 
-
-
-
-
-    # print("#{} ".format(tc, ))
+    print("#{}".format(tc))
+    for i in range(len(arr)):
+        print(*arr[i])
 
