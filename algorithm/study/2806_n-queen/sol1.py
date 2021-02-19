@@ -3,7 +3,7 @@ sys.stdin = open("input.txt")
 
 T = int(input())
 
-# i: x축 위치
+# 퀸 있는지 체크
 def check(i):
     global case
     if i == N:
@@ -11,6 +11,7 @@ def check(i):
         return
     for j in range(N):
         if not (y[j] or dia1[i+j] or dia2[i-j+N-1]):
+
 
 
 for tc in range(1, T+1):

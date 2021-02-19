@@ -1,4 +1,7 @@
 import sys
+
+import permutation as permutation
+
 sys.stdin = open("input.txt")
 
 TC  = int(input())
@@ -30,4 +33,3 @@ for tc in range(1, TC+1):
             result += 1
 
     print('#{} {}'.format(tc, result))
-

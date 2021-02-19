@@ -9,7 +9,7 @@ for TC in range(1, T+1):
     cntB = 0
     l = 1
     r = P
-    while 1:
+    while True:
         c = int((l+r)/2)
         cntA += 1
         if c == A:
@@ -20,7 +20,7 @@ for TC in range(1, T+1):
             r = c
     l = 1
     r = P
-    while 1:
+    while True:
         c = int((l+r)/2)
         cntB += 1
         if c == B:

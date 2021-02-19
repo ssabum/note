@@ -19,7 +19,7 @@ for tc in range(1, T+1):
 
     # 맞을 경우
     match = 0
-    # 맞을 경유의 합
+    # 맞을 경우의 합
     cnt = 0
     # 가로줄에 들어갈 경우 / 가로로 순환
     for i in range(N):
@@ -30,10 +30,10 @@ for tc in range(1, T+1):
             # 1이면 match += 1
             else:
                 match += 1
-                # match와 k수 같아지고 다음칸에 0이면
-                if match == K and puzzle[i][j+1] == 0:
-                    # cnt += 1
-                    cnt += 1
+            # match와 k수 같아지고 다음칸에 0이면
+            if match == K and puzzle[i][j+1] == 0:
+                # cnt += 1
+                cnt += 1
 
     # 세로줄에 들어갈 경우 / 세로로 순환
     for i in range(N):
@@ -42,8 +42,8 @@ for tc in range(1, T+1):
                 match = 0
             else:
                 match += 1
-                if match == K and puzzle[j+1][i] == 0:
-                    cnt += 1
+            if match == K and puzzle[j+1][i] == 0:
+                cnt += 1
 
     print("#{} {}".format(tc, cnt))
 
