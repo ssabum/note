@@ -27,5 +27,5 @@ while True:
 # 2차원 리스트 출력하기
 for i in range(len(data)):
     for j in range(len(data[0])):
-        print('%3d' % data[i][j], end='')
+        print('{:3d}'.format(data[i][j]), end='')
     print()
