@@ -1,14 +1,8 @@
-def BruteForce(p, t):
-    N = len(t)
-    M = len(p)
+a = [0,0,0,0]
+b = [0,0,1,1]
 
-    for i in range(N-M+1):
-        cnt = 0
-        for j in range(M):
-            if t[i+j] == p[j]:
-                cnt += 1
-            else:
-                break
-        if cnt == M:
-            return i
-    return -1
+for i in range(4):
+    if a[i] != b[i]:
+        a[i:] = b[i]
+
+print(a)
