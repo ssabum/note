@@ -35,10 +35,9 @@ for tc in range(1, T+1):
         # 현재 위치
         now = stack.pop()
         # 현재 위치에 방문 했다면
-        if visited[now]:
-            pass
-        # 방문 안 했다면
-        visited[now] = True
+        if not visited[now]:
+            # 방문 안 했다면
+            visited[now] = True
         # 현재 위치의 노드에 연결된 노드들 반복
         for v in edge_list[now]:
             # 방문 안한 노드면

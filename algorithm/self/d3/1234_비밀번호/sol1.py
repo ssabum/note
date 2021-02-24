@@ -4,16 +4,11 @@ sys.stdin = open("input.txt")
 for tc in range(1, 11):
     num, data = list(input().split())
 
-    stack = [0]
+    stack = []
     for i in data:
-        if stack[-1] == i:
-            stack.pop()
-        else:
+        if not stack or stack[-1] != i:
             stack.append(i)
+        elif stack[-1] == i:
+            stack.pop()
 
-    result = stack[1:]
-
-    print("#{}".format(tc), end=" ")
-    for i in result:
-        print(i, end="")
-    print()
+    print("#{} {}".format(tc, ''.join(stack)))
