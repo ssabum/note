@@ -1,10 +1,13 @@
 import sys
 sys.stdin = open("input.txt")
 
-T = int(input())
+for tc in range(1, 11):
+    N = int(input())
+    code = list(map(int, input().split()))
+    i = 0
+    while code[-1] > 0:
+        i = (i % 5) + 1
+        code.append(code.pop(0) - i)
+    code[-1] = 0
 
-
-for tc in range(1, T+1):
-    
-    print("#{} ".format(tc, ))
-
+    print("#{} {} {} {} {} {} {} {} {}".format(tc, *code))
