@@ -8,7 +8,8 @@ def check(n):
     while n:
         digit = n % 10
         n = n // 10
-        if digit != 0 and digit % 3 == 0:
+        # if digit != 0 and digit % 3 == 0:
+        if digit == 3 or digit == 6 or digit == 9:
             count += 1
     return count
 
