@@ -18,6 +18,4 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # 'articles/'로 시작하는 주소는 articles 앱의 urls.py에 가서 처리해!
-    path('articles/', include('articles.urls')),
 ]

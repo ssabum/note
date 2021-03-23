@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>게시글</h2>
+  {% if notice.image %}
+    <img src="{{ notice.image.url }}" alt="{{ notice.image }}">
+  {% endif %}
+
+  <h3>{{ notice.pk }} 번째 글</h3>
+  <hr>
+  <p>제목 : {{ notice.title }}</p>
+  <p>내용 : {{ notice.content }}</p>
+  <p>작성시각 : {{ article.created_at }}</p>
+  <p>수정시각 : {{ notice.updated_at }}</p>
+  <hr>
+  <a href="{% url 'notice:update' notice.pk %}" class="btn btn-primary">[UPDATE]</a>
+  <form action="{% url 'notice:delete' notice.pk %}" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">DELETE</button>
+  </form>
+  <a href="{% url 'notice:index' %}">[back]</a>
+
+{% endblock content %}
+

@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i14==tw%s-z+gj^9px$b$=egx9#ftp3coa%+y_hyeq+v)%1zvk'
+SECRET_KEY = 'b)ka3&b0dswg&g2t-(bkhf==pgpj)u11w_4@kb6ap1!w9g=g#%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,11 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 1. 로컬 앱
     'articles',
-    # 2. 서드파티 라이브러리
-
-    # 3. 장고 코어 앱
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +56,7 @@ ROOT_URLCONF = 'samplepjt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'samplepjt' / 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,12 +102,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization(국제화)
+# Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Seoul'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

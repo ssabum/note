@@ -97,5 +97,24 @@ django를 사용할 때 기본적으로 딸려 오는 앱으로 추가적으로 
 
 사이트 관리를 위한 관리자 전용 페이지로 django는 자동으로 제공
 
+## ssafy class
+
+### 중요
+
+`urls.py`: 주소 관리
+
+`views.py`: 페이지 관리
+
+`models.py`: 데이터베이스 관리
+
+### 실행순서
+
+1. installed_apps: 앱 등록
+2. project/urls.py: path 등록
+3. app/views.py: 요청 수신/반환 함수 작성
+4. templates/index.html: templates 작성
+
+
+
 
 

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+{% endblock css %}
+
+{% block content %}
+<br>
+  <h1>게시판</h1>
+  <hr>
+  {% for notice in notices %}
+    <p>글 번호 : {{ notice.pk }}</p>
+    <p>글 제목 : {{ notice.title }}</p>
+    <p>
+    글 내용 : {{ notice.content }}
+    <a href="{% url 'notice:detail' notice.pk %}">...more</a>
+    </p>
+    <hr>
+  {% endfor %}
+{% endblock content %}
+
+
+
+
+
