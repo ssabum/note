@@ -4,7 +4,13 @@ from django.conf import settings
 # Create your models here.
 class Article(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    # 게시글을 작성한 유저 확인: article.user
+    # 유저가 작성한 게시글들 확인: user,article_set
+    
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_articles')
+    # 유저가 좋아요 누른 게시글들 확인: user,article_set (위 1:N과 겹침) -> user.like_articles 설정
+    # 게시글에 좋아요 누른 유저들 확인: article.like_users
+    
     title = models.CharField(max_length=10)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
