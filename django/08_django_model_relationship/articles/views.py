@@ -4,13 +4,20 @@ from django.views.decorators.http import require_safe, require_http_methods, req
 from django.http import HttpResponse, HttpResponseForbidden
 from .models import Article, Comment
 from .forms import ArticleForm, CommentForm
+import hashlib
 
 # Create your views here.
 @require_safe
 def index(request):
+    if request.user.is_authenticated:
+        gravatar_url = hashlib.md5('request.user.email'.encode('utf-8').strip().lower()).hexdigest()
+    else:
+        gravatar_url = None
+
     articles = Article.objects.order_by('-pk')
     context = {
         'articles': articles,
+        'gravatar_url': gravatar_url,
     }
     return render(request, 'articles/index.html', context)
 
