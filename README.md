@@ -165,8 +165,6 @@
 
 ## 👀 프로필
 
----
-
 <div align = "center">
 <table style="border-spacing: 30px;">
   <tr>
