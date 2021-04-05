@@ -257,13 +257,12 @@
    ```python
    # orm
    User.objects.filter(country='강원도', last_name='황').values('first_name')
-```
+   ```
    
-      ```sql
+   ```sql
    -- sql
-   SELECT first_name FROM users_user WHERE country='강원도' and last_name='황';
-      ```
-
+   SELECT first_name FROM users_user WHERE country='강원도' and last_name='황';   
+   ```
 ---
 
 ### 3. 정렬 및 LIMIT, OFFSET
@@ -297,25 +296,23 @@
       ```python
    # orm
    User.objects.order_by('balance', '-age')[:10]
-```
+   ```
    
    ```sql
    -- sql
    SELECT * FROM users_user ORDER BY balance, age DESC LIMIT 10;
    ```
-   
 4. 성, 이름 내림차순 순으로 5번째 있는 사람
 
    ```python
    # orm
    User.objects.order_by('-last_name', '-first_name')[4]
-```
+   ```
    
-      ```sql
+   ```sql
    -- sql
-   SELECT * FROM users_user ORDER BY last_name DESC, first_name DESC LIMIT 1 OFFSET 4;
-      ```
-
+   SELECT * FROM users_user ORDER BY last_name DESC, first_name DESC LIMIT 1 OFFSET 4;   
+   ```
 ---
 
 ### 4. 표현식
@@ -380,9 +377,9 @@
    ```python
    # orm
    User.objects.aggregate(Sum('balance'))
-```
+   ```
    
-      ```sql
+   ```sql
    -- sql
    SELECT SUM(balance) FROM users_user;
-      ```
+   ```
