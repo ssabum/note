@@ -116,12 +116,13 @@ $ git push origin "본인의 branch name"
 ```
 
 이후 github에서 Pull Request 합니다.
+
 <br>
 
 ## 👉 4. Member
 
 <div align = "center">
-<table style="width: 100%;">
+<table>
   <tr>
     <td align="center"><a href="https://github.com/Gyagya00"><img src="https://avatars.githubusercontent.com/u/35443131?v=4" width="100px;" alt=""/><br /><sub><b>가은</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
     <td align="center"><a href="https://github.com/yeonjii"><img src="https://avatars.githubusercontent.com/u/77573938?v=4" width="100px;" alt=""/><br /><sub><b>연지</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
