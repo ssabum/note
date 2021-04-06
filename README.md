@@ -6,7 +6,8 @@
 
 ## 👉 1. What
 Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 문제를 선별해서 풉니다. 
-	<br>
+
+<br>
 
 ## 👉 2.  How
 
@@ -14,11 +15,13 @@ Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 �
 
 - [solved.ac](https://solved.ac/)에서 `class3`부터 차례대로 문제풀이 진행
 - 매주 최소 3문제씩 문제 풀이
+
 <br>
 
 ## 👉 3. Convention
 저희는 다음과 같은 Convention을 지키는 걸 지향합니다
-	<br>
+
+<br>
 
 ### ✅  Code Convention
 
@@ -32,7 +35,12 @@ Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 �
 왜 ? git에 코드를 올릴 때는 코드 맨 아래에 아무것도 없는 빈 newline을 하나 만드는 게 일반적입니다.
 
 코드 맨 아래에 빈 newline이 없을 경우 경고 메시지가 나오기 때문입니다.
-	<br>
+
+
+
+<br>
+
+
 
 ### ✅ Commit Convention
 
@@ -108,7 +116,7 @@ $ git push origin "본인의 branch name"
 ```
 
 이후 github에서 Pull Request 합니다.
-	<br>
+<br>
 
 ## 👉 4. Member
 
