@@ -121,10 +121,10 @@ $ git push origin "본인의 branch name"
 
 ## 👉 4. Member
 
-<table>
+<table align="center">
   <tr>
-    <td width="30%" align="center"><a href="https://github.com/Gyagya00"><img src="https://avatars.githubusercontent.com/u/35443131?v=4" width="100px;" alt=""/><br /><sub><b>가은</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
-    <td width="30%" align="center"><a href="https://github.com/yeonjii"><img src="https://avatars.githubusercontent.com/u/77573938?v=4" width="100px;" alt=""/><br /><sub><b>연지</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
-    <td width="30%" align="center"><a href="https://github.com/ssabum"><img src="https://avatars.githubusercontent.com/u/77424000?v=4" width="100px;" alt=""/><br /><sub><b>범희</b></sub><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></a><br /></td>
+    <td width="30%" align="center"><a href="https://github.com/Gyagya00"><img src="https://avatars.githubusercontent.com/u/35443131?v=4" width="70%;" alt=""/><br /><sub><b>가은</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
+    <td width="30%" align="center"><a href="https://github.com/yeonjii"><img src="https://avatars.githubusercontent.com/u/77573938?v=4" width="70%;" alt=""/><br /><sub><b>연지</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
+    <td width="30%" align="center"><a href="https://github.com/ssabum"><img src="https://avatars.githubusercontent.com/u/77424000?v=4" width="70%;" alt=""/><br /><sub><b>범희</b></sub><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></a><br /></td>
   </tr>
 </table>
