@@ -6,7 +6,7 @@
 
 ## 👉 1. What
 Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 문제를 선별해서 풉니다. 
-<br>
+	<br>
 
 ## 👉 2.  How
 
@@ -18,7 +18,7 @@ Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 �
 
 ## 👉 3. Convention
 저희는 다음과 같은 Convention을 지키는 걸 지향합니다
-<br>
+	<br>
 
 ### ✅  Code Convention
 
@@ -32,7 +32,7 @@ Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 �
 왜 ? git에 코드를 올릴 때는 코드 맨 아래에 아무것도 없는 빈 newline을 하나 만드는 게 일반적입니다.
 
 코드 맨 아래에 빈 newline이 없을 경우 경고 메시지가 나오기 때문입니다.
-<br>
+	<br>
 
 ### ✅ Commit Convention
 
@@ -108,16 +108,16 @@ $ git push origin "본인의 branch name"
 ```
 
 이후 github에서 Pull Request 합니다.
-<br>
+	<br>
 
 ## 👉 4. Member
 
 <div align = "center">
 <table style="width: 100%;">
   <tr>
-    <td style="width=30%;" align="center"><a href="https://github.com/Gyagya00"><img src="https://avatars.githubusercontent.com/u/35443131?v=4" width="100px;" alt=""/><br /><sub><b>가은</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
-    <td style="width=30%;" align="center"><a href="https://github.com/yeonjii"><img src="https://avatars.githubusercontent.com/u/77573938?v=4" width="100px;" alt=""/><br /><sub><b>연지</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
-    <td style="width=30%;" align="center"><a href="https://github.com/ssabum"><img src="https://avatars.githubusercontent.com/u/77424000?v=4" width="100px;" alt=""/><br /><sub><b>범희</b></sub><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></a><br /></td>
+    <td align="center"><a href="https://github.com/Gyagya00"><img src="https://avatars.githubusercontent.com/u/35443131?v=4" width="100px;" alt=""/><br /><sub><b>가은</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/yeonjii"><img src="https://avatars.githubusercontent.com/u/77573938?v=4" width="100px;" alt=""/><br /><sub><b>연지</b><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ssabum"><img src="https://avatars.githubusercontent.com/u/77424000?v=4" width="100px;" alt=""/><br /><sub><b>범희</b></sub><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="15" height="15"/></a><br /></td>
   </tr>
 </table>
 </div>
