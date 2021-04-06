@@ -1,13 +1,16 @@
 # Algorithm Study 😎
 <div align = "center">
-<img src="README.assets/img.gif" alt="main image">
+<img src="./README.assets/img.gif" alt="main image">
 </div>
+
 
 ## 👉 1. What
 Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 문제를 선별해서 풉니다. 
+
 <br>
 
 ## 👉 2.  How
+
 `Pull Request` 자기 계정으로 해당 Repository fork 하기
 
 - [solved.ac](https://solved.ac/)에서 `class3`부터 차례대로 문제풀이 진행
@@ -18,7 +21,10 @@ Baekjoon, Programmers, Swea 등에서 Baekjoon 기준 from 실버 to 골드인 �
 ## 👉 3. Convention
 저희는 다음과 같은 Convention을 지키는 걸 지향합니다
 
+<br>
+
 ### ✅  Code Convention
+
 #### ❗ README.md 에 코드 마다 이 코드는 **어떤 목적**으로 작성되었는지 주석을 답니다.
 #### 변수와 함수 이름은 어떤 역할을 하는지 알 수 있도록 붙입니다.
 
