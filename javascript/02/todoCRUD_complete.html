@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .done {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <form name="myform" action="/todos/">
+  <input type="text" name="spell">
+  <button>Todo</button>
+  </form>
+  <ul><li>기존</li></ul>
+  <script>
+
+    function addTodo() {
+      event.preventDefault()
+
+      const input = document.querySelector('input')
+      const content = input.value
+      if(content == ""){
+        alert("내용을 입력해 주세요.")
+        document.myform.spell.focus()
+        return
+      }
+      // if (content.trim()) {      
+      // }
+
+      const li = document.createElement('li')
+      li.innerText = content
+
+      const ul = document.querySelector('ul')
+      ul.appendChild(li)
+      document.body.appendChild(ul)
+
+      li.addEventListener('click', function (ecent) {
+        // if (event.target.classList.contains('done')) {
+        //   event.target.classList.remove('done')
+        // } else {
+        //   event.target.classList.add('done')
+        // }
+        event.target.classList.toggle('done')
+      })
+
+      const deleteBtn = document.createElement('button')
+      deleteBtn.innerText = 'X'
+
+      li.appendChild(deleteBtn)
+
+      deleteBtn.addEventListener('click', function () {
+        // event.target.parentNode.remove()
+        li.remove()
+      })
+
+      event.target.reset()
+    }
+
+    // const myButton = document.querySelector('button')
+    // myButton.addEventListener('click', addTodo)
+
+    const form = document.querySelector('form')
+    form.addEventListener('submit', addTodo)
+
+  </script>
+</body>
+</html>
