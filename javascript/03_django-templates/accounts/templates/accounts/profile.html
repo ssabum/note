@@ -6,16 +6,24 @@
 {% with followings=person.followings.all followers=person.followers.all %}
   <div>
     <div>
-      팔로잉 : {{ followings|length }} / 팔로워 : {{ followers|length }}
+      팔로잉 :
+      <span id='followings-count-{{ person.pk }}'>{{ followings|length }}</span>
+       / 팔로워 : 
+       <span id='followers-count-{{ poerson.pk }}'>
+        {{ followers|length }}</span>
     </div>
     {% if request.user != person %}
       <div>
-        <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+        <form class='follow-form' data-id='{{ person.pk }}'>
           {% csrf_token %}
           {% if request.user in followers %}
-            <button>언팔로우</button>
+            <button class='btn btn-link btn-outline-light'>
+              <i id='follow-{{ person.pk }}' class='fas fa-hand-pointer' style='color: blue'></i>
+            </button>
           {% else %}
-            <button>팔로우</button>
+            <button class='btn btn-link btn-outline-light'>
+              <i id='follow-{{ person.pk }}' class='fas fa-hand-pointer' style='color: gray'></i>
+            </button>
           {% endif %}
         </form>
       </div>
@@ -48,4 +56,37 @@
 <hr>
 
 <a href="{% url 'articles:index' %}">[back]</a>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  const forms = document.querySelectorAll('.follow-form')
+  const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+  
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault()
+      console.log(event)
+      const userId = event.target.dataset.id
+
+      axios.post(`http://127.0.0.1:8000/accounts/${userId}/follow/`, {},
+        {headers: {'X-CSRFToken': csrftoken}
+      }).then(function (response) {
+        const followed = response.data.followed
+        const followersCount = response.data.followers_count
+        const followingsCount = response.data.followings_count
+
+        const followButton = document.querySelector(`#follow-${userId}`)
+        if (followed) {
+          followButton.style.color = 'blue'
+        } else {
+          followButton.style.color = 'gray'
+        }
+        
+        const followingsNum = document.querySelector(`#followings-count-${userId}`)
+        followingsNum.innerText = count
+        const followersNum = document.querySelector(`#followers-count-${userId}`)
+        followersNum.innerText = count
+      })
+    })
+  })
+</script>
 {% endblock %}

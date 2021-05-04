@@ -122,8 +122,16 @@ def follow(request, user_pk):
             # if request.user in person.followers.all():
                 # 팔로우 끊음
                 you.followers.remove(me)
+                followed = False
             else:
                 # 팔로우 신청
                 you.followers.add(me)
-        return redirect('accounts:profile', you.username)
+                followed = True
+        follow_status = {
+            'followed': followed,
+            'followers_count': you.followers.count(),
+            'followings_count': me.followings.count(),
+        }
+        return JsonResponse(follow_status)
+        # return redirect('accounts:profile', you.username)
     return redirect('accounts:login')
