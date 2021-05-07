@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>a1: {{ a1 }}</h1>
+    <h1>a2: {{ a2 }}</h1>
+    <!-- <h1>a1 + a2 = {{ add_method() }}</h1>
+    <h1>a1 + a2 = {{ add_method() }}</h1>
+    <h1>a1 + a2 = {{ add_method() }}</h1>
+    <h1>Computed</h1>
+    <h1>a1 + a2 = {{ add_computed }}</h1>
+    <h1>a1 + a2 = {{ add_computed }}</h1>
+    <h1>a1 + a2 = {{ add_computed }}</h1> -->
+    <h1>method: {{ getRandomMethod() }}</h1>
+    <h1>method: {{ getRandomMethod() }}</h1>
+    <h1>method: {{ getRandomMethod() }}</h1>
+    <hr>
+    <h1>computed: {{ getRandomComputed }}</h1>
+    <h1>computed: {{ getRandomComputed }}</h1>
+    <h1>computed: {{ getRandomComputed }}</h1>
+    <button v-on:click='changeData'>Change Number</button>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        a1: 100,
+        a2: 200,
+      },
+      methods: {
+        add_method: function () {
+          console.log('add_method')
+          return this.a1 + this.a2
+        },
+        changeData: function () {
+          this.a1 = 1111
+          this.a2 = 2222
+        },
+        getRandomMethod: function () {
+          return Math.random()
+        }
+      },
+      computed: {
+        add_computed: function () {
+          console.log('add_computed')
+          return this.a1 + this.a2
+        },
+        getRandomComputed: function () {
+          return Math.random()
+        }
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Input -> Data</h1>
+    <h3>{{ myMessage }}</h3>
+    <input :value='myMessage' type="text" @keyup='onInputChange'>
+    <button v-on:click='reset1'>Reset</button>
+    <h1> v-model </h1>
+    <h3>{{ myMessage2 }}</h3>
+    <input v-model='myMessage2' type="text">
+    <button v-on:click='reset2'>Reset</button>
+    <hr>
+    <h1>Checkbox</h1>
+    <input type="checkbox" id="checkbox" v-model='checked'>
+    <label for="checkbox">{{ checked }}</label>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+     const app = new Vue({
+       el: '#app',
+       data: {
+         myMessage: '',
+         myMessage2: '',
+         checked: true,
+       },
+       methods: {
+         onInputChange: function () {
+           this.myMessage = event.target.value
+         },
+         reset1: function () {
+           this.myMessage = ''
+         },
+         reset2: function () {
+           this.myMessage2 = ''
+         },
+       }
+     })
+  </script>
+</body>
+</html>

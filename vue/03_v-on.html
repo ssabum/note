@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button v-on:click='alertMessage'>Alert Button</button>
+    <button v-on:click='changeMessage'>Change Message Button</button>
+    <hr>
+    <h1>{{ counter }}</h1>
+    <button v-on:click='addOne'>Add Count</button>
+    <button v-on:click='reset'>Reset</button>
+    <hr>
+    <form action="/articles" @submit.prevent>
+    <button>Submit</button>
+    </form>
+    <hr>
+    <input type="text" @keyup.enter="onInputEnter('문자열')">
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!',
+        counter: 0,
+      },
+      methods: {
+        alertMessage: function () {
+          alert(this.message)
+        },
+        changeMessage: function () {
+          this.message = '안녕하세용가뤼'
+        },
+        addOne: function () {
+          this.counter += 1
+        },
+        reset: function () {
+          this.counter = 0
+        },
+        onInputEnter: function (inputValue) {
+          console.log('Enter Enter!')
+          console.log(event)
+          console.log(inputValue)
+        },
+      }
+    })
+  </script>
+</body>
+</html>

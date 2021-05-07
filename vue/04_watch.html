@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    input1: <input type="text" v-model='a1'>
+    <h1>{{ a1 }}</h1>
+    <br>
+    input2: <input type="text" v-model='a2'>
+    <h1>{{ a2 }}</h1>
+    <hr>
+    {{ a3 }}
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        a1: '',
+        a2: '',
+        a3: '',
+      },
+      watch: {
+        // a1을 감시하는 watch
+        a1: function(newVal, oldVal) {
+          console.log('a1의 새로운 값', newVal, 'a1의 예전 값', oldVal)
+          this.a3 = 'a1: ' + newVal
+        },
+        // a2를 감시하는 wathc
+        a2: function(newVal, oldVal) {
+          console.log('a2의 새로운 값', newVal, 'a2의 예전 값', oldVal)
+          this.a3 = 'a2: ' + newVal
+        }
+        }
+      })
+  </script>
+</body>
+</html>
