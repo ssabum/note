@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg nav-bar">
+  <a class="navbar-brand" id="nav-title" href="{% url 'movie:index' %}">SSAFLIX</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      {% if user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'account:detail' user.username %}" tabindex="-1" aria-disabled="true">{{ user.username }}</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'account:logout' %}">로그아웃</a>
+      </li>
+      {% else %}
+      <li class="nav-item active">
+        <a class="nav-link btn btn-danger py-1" href="{% url 'account:login' %}">로그인</a>
+      </li>
+      <li class="nav-item ml-5 mr-5">
+        <a class="nav-link btn btn-danger py-1" href="{% url 'account:signup' %}">회원가입</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

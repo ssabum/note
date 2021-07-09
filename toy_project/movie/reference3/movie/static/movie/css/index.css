@@ -1,0 +1,421 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #181818;
+  color: #E9E9E9;
+  font-family: 'Do Hyeon', sans-serif;
+  overflow-x: hidden;
+  height: 94vh;
+}
+
+#app {
+  padding-top: 4rem;
+  height: 100%;
+  background-image: url('https://images6.alphacoders.com/979/979298.png');
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.movie-ment {
+  position: absolute;
+  font-size: 3rem;
+  top: -90px;
+  left: 80px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color:  #E9E9E9;
+}
+
+.login-main {
+  height: 80vh;
+}
+.login-box {
+  width: 30vw;
+  left: 300px;
+  top: 300px;
+}
+
+.arrow {
+  font-size :40px;
+  display: float;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 80px;
+  position: absolute;
+}
+
+.right-arrow {
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 0;
+  top: 80px;
+  position: absolute;
+}
+
+.left-arrow2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  top: 80px;
+}
+
+.right-arrow2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 0;
+  position: absolute;
+  top: 80px;
+}
+
+.login-text {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.login-line {
+  border: 4px solid red;
+}
+
+.login-btn {
+  width: 100%;
+}
+
+
+h1 { 
+  color: red;
+  opacity: 1;
+}
+
+.nav-bar {
+  background-color: rgba(18, 18, 18, 0.9);
+  color: white;
+}
+
+.nav-bar a, .nav-bar a:hover {
+  text-decoration: none;
+  color: white; 
+}
+
+#nav-title {
+  color: #FF0000;
+  font-size: 2.5rem;
+}
+
+.movie-container {
+  margin-top: 7rem;
+  display: flex;
+  padding: 0 4rem;
+  opacity: 1;
+  position: relative;
+}
+
+.show-more {
+  visibility: hidden;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  top: 158px;
+  left: 140px;
+  color: rgba(DE,DE,DE,1);
+}
+.show-more:hover {
+  color: #FF0000;
+}
+
+.movie-small-name {
+  margin-left: 1rem;
+}
+
+.items {
+  background-color: green;
+  height: 12rem;
+  flex: 0 0 19.7%;
+  max-width: 353px !important;
+  text-align: center;
+  margin: 0 6px;
+  transition: transform 400ms ease 200ms;
+}
+
+.movie-container:hover .items {
+  transform: translateX(-25%);
+}
+
+.items:hover ~ .items {
+  transform: translateX(25%);
+}
+.items:hover .dod, .items:hover .show-more{
+  visibility: visible;
+}
+
+.items:hover {
+  transform: scale(1.38) !important;
+}
+
+.movie-spec-info {
+  background-color: #080808;
+}
+
+.show-more-see {
+  margin-top:80px;
+  margin-left: 4rem;
+  transition: all .5s ease-in-out;
+  height:0;
+  position: relative;
+}
+
+.movie-sub-title {
+  display: flex;
+  flex-direction: space-around;
+}
+
+.sub-box-name {
+  border: 2px solid white;
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  margin-right: -4px;
+  padding: 0.4rem 0.8rem;
+}
+.movie-sub-title {
+  margin-top: 2rem;
+}
+.sub-box-value {
+  background-color: white;
+  color : #181818;
+  font-size: 1.3rem;
+  margin-left: -1px;
+  padding: 0.5rem 0.9rem;
+}
+
+.movie-main-title {
+  display: inline-block;
+  color: white;
+}
+
+.movie-close-btn {
+  text-align: right;
+  color: white;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.img-div {
+  background-color: rgba(0,0,0,0.6);
+  min-height: 670px;
+  max-height: 670px;
+}
+
+.movie-close-btn:active {
+  color: #9A9A9A;
+  transform : rotateX(90deg);
+}
+
+.detail-description {
+  font-size: 1.5rem;
+  max-height: 400px;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 1.2px;
+}
+.detail {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.detail-subtext {
+  margin: 0 4px;
+}
+
+.detail-comment-box {
+  position: absolute;
+  top: 0;
+}
+
+.close-box {
+  position: absolute;
+  right:0;
+  top:0;
+}
+
+.bottom-menu {
+  background-color: #080808;
+  padding-top: 2rem;
+}
+
+.bottom-menu > span {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: rgba(255,255,255,0.6);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: inline-block;
+}
+
+.bottom-menu > span:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.menu-click {
+  color: white !important;
+}
+.menu-click:hover {
+  border-bottom: 3px solid white;
+}
+
+.blur-image {
+  filter: blur(6px);
+}
+
+.movie1, .movie2 {
+  position: relative;
+}
+
+.movie2 {
+  margin-top: 2rem;
+}
+
+.showing {
+  margin-bottom: 830px;
+}
+
+.recommend-list {
+  position: relative;
+  top: -480px;
+  left: -630px;
+}
+
+.recommend-mv-list {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.rc-mv-item {
+  height: 12rem;
+  flex: 0 0 15%;
+  max-width: 400px !important;
+  text-align: center;
+  margin: 1rem;
+}
+
+.detail-content-box {
+  position: absolute;
+  top: 250px;
+  left: -490px;
+}
+.detail-content-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: white;
+  opacity: 1;
+  border-bottom: 4px solid white;
+}
+.detail-content-text {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.comment-box {
+  position: absolute;
+  top: 0;
+ }
+
+.comment-add-box {
+  position: absolute;
+  top: 500px;
+  left: 150px;
+}
+
+.recMvImage {
+  max-width: 400px;
+  height: auto;
+}
+
+.rc-left-arrow {
+  position: relative;
+  top: 160px;
+}
+.rc-right-arrow {
+  position: absolute;
+  right: -600px;
+  top: 160px;
+}
+
+.recMvSub {
+  position: absolute;
+  top:250px;
+  margin-left:1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.show-total-data {
+  max-height: 670px !important;
+}
+
+.movie-img-div {
+  max-height: 670px;
+
+}
+#footer {
+    position: relative;
+    bottom: 0;
+    background-color: #040404;
+    padding-top: 10px;
+    margin-top: 2rem;
+}
+
+.footer-container{
+}
+
+.comment-content-box {
+  margin-top: 8rem;
+  max-height: 330px;
+  overflow: hidden;
+}
+
+.comment-delete {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-size : 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 10px;
+  padding: 5px 16px;
+}
+
+.comment-user, .comment-content {
+  font-size: 2rem;
+}
+
+.comment-content {
+  color: #FFFFFF;
+}
+
+.god-hand {
+  min-height: 200px;
+  min-width: 100%;
+}
+
+.comment-user {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.like-heart {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.liked-heart {
+  color: #FF0000;
+}

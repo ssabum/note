@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+{% csrf_token %}
+<div id="app">
+  <div class="movie1" :class="{'showing':show}">
+  <p class="movie-ment">저희만 추천합니다.</p>
+    <i @click="prevPage" class="fas fa-chevron-left arrow left-arrow"></i>
+    <div :style="{'margin-left': page +'%'}"class="movie-container">
+      <div class="items d-flex align-items-end" v-for="movie in movies" :style="{'background': 'url(https://image.tmdb.org/t/p/w500'+movie.backdrop+')'}">
+        <div class="item-bottom">
+          <span class="movie-small-name">[[ movie.title ]]</span>
+          <i v-show="!show" class="fas fa-chevron-down show-more mb-2" @click="showMore(movie)"></i>
+          <i v-show="show" class="fas fa-chevron-up show-more mb-2" @click="showMore(movie)"></i>
+        </div>
+      </div>
+      <i @click="nextPage"class="fas fa-chevron-right arrow right-arrow"></i>
+  </div>
+  <show-more :liked="liked" :rm="recommendMovies":class=`show-more-see` v-if="show" :movie="showmovie" v-model="show" :show="show"></show-more>
+  </div>
+  <div class="movie2" :class="{'showing':show2}">
+    <p class="movie-ment">당신의 취향 고려하지 않습니다.</p>
+    <i @click="prevPage2" class="fas fa-chevron-left arrow left-arrow2"></i>
+    <div :style="{'margin-left': page2 +'%'}"class="movie-container">
+      <div class="items d-flex align-items-end" v-for="movie in movies2" :style="{'background': 'url(https://image.tmdb.org/t/p/w500'+movie.backdrop+')'}">
+        <div class="item-bottom">
+          <span class="movie-small-name">[[ movie.title ]]</span>
+          <i v-show="!show2" class="fas fa-chevron-down show-more mb-2" @click="showMore2(movie)"></i>
+          <i v-show="show2" class="fas fa-chevron-up show-more mb-2" @click="showMore2(movie)"></i>
+        </div>
+      </div>
+      <i @click="nextPage2"class="fas fa-chevron-right arrow right-arrow2"></i>
+    </div>
+
+    <show-more :liked="liked" :rm="recommendMovies":class=`show-more-see` v-if="show2" :movie="showmovie" v-model="show2" :show="show2"></show-more>
+  </div>
+  <div class="god-hand">
+  </div>
+{% include "footer.html" %}
+</div>
+<script>
+  let user 
+  {% if user.is_authenticated %}
+    user = '{{ user }}'
+  {% endif %}
+  
+</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+
+<script type="text/javascript" src="{% static 'movie/js/comment.js' %}"></script>
+<script type="text/javascript" src="{% static 'movie/js/recommend.js' %}"></script>
+<script type="text/javascript" src="{% static 'movie/js/main.js' %}"></script>
+
+
+{% endblock %}
